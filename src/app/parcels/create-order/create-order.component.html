@@ -1,0 +1,61 @@
+<div class="holder">
+  <div class="text-order">
+    <h2>Place your order</h2>
+  </div>
+  <form
+    novalidate
+    (ngSubmit)="onSubmit()"
+    class="form-signin create"
+    [formGroup]="createOrderForm"
+  >
+    <!-- The form control name must match the one in the comp -->
+
+    <div class="form__group">
+      <input
+        type="text"
+        formControlName="destination"
+        class="form__input"
+        placeholder="destination"
+        required
+        autocomplete="off"
+        id="destination"
+      />
+      <label for="destination" class="form__label">destination</label>
+    </div>
+    <div class="form__group">
+      <input
+        type="text"
+        class="form__input"
+        formControlName="origin"
+        placeholder="origin"
+        required
+        autocomplete="off"
+        id="origin"
+      />
+      <label for="origin" class="form__label">origin</label>
+    </div>
+
+    <div class="form__group">
+      <input
+        type="number"
+        class="form__input"
+        formControlName="weight"
+        placeholder="weight"
+        required
+        autocomplete="off"
+        id="weight"
+      />
+      <label for="origin" class="form__label">weight</label>
+    </div>
+    <div class="btn-sub">
+      <button
+        class="btn btn-primary text-uppercase"
+        type="submit"
+        [disabled]="!createOrderForm.valid"
+      >
+        Place parcel order
+      </button>
+    </div>
+  </form>
+</div>
+<!-- <ngx-spinner></ngx-spinner> -->

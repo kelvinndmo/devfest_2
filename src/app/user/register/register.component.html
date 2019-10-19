@@ -1,0 +1,86 @@
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 mx-auto">
+        <div class="card card-signin flex-row my-5">
+          <div class="card-img-left d-none d-md-flex">
+            <!-- Background image for card set in CSS! -->
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center form__group">Register</h5>
+            <!-- call the save function in our component to save the form 
+            also use the formGroup to identify the form as the instance created in our component
+            -->
+            <form
+              novalidate
+              (ngSubmit)="save()"
+              class="form-signin"
+              [formGroup]="registerForm"
+            >
+              <!-- The form control name must match the one in the comp -->
+              <div class="form__group">
+                <input
+                  type="email"
+                  class="form__input"
+                  formControlName="email"
+                  placeholder="Email Adress"
+                  required
+                  autocomplete="off"
+                  id="name"
+                />
+                <label for="name" class="form__label">Email Adress</label>
+              </div>
+              <div class="form__group">
+                <input
+                  type="text"
+                  formControlName="username"
+                  class="form__input"
+                  placeholder="Username"
+                  required
+                  autocomplete="off"
+                  id="email"
+                />
+                <label for="email" class="form__label">username</label>
+              </div>
+              <div class="form__group">
+                <input
+                  type="password"
+                  class="form__input"
+                  formControlName="password"
+                  placeholder="Password"
+                  required
+                  autocomplete="off"
+                  id="email"
+                />
+                <label for="email" class="form__label">Password</label>
+              </div>
+
+              <button
+                class="btn btn-lg btn-primary btn-block text-uppercase"
+                type="submit"
+                [disabled]="!registerForm.valid"
+              >
+                Register
+              </button>
+              <a class="d-block text-center mt-2 small" href="#">Sign In</a>
+              <hr class="my-4" />
+              <button
+                class="btn btn-lg btn-google btn-block text-uppercase"
+                type="submit"
+              >
+                <i class="fab fa-google mr-2"></i> Sign up with Google
+              </button>
+              <button
+                class="btn btn-lg btn-facebook btn-block text-uppercase"
+                type="submit"
+              >
+                <i class="fab fa-facebook-f mr-2"></i> Sign up with Facebook
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<ngx-spinner></ngx-spinner>

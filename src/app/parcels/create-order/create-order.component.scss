@@ -1,0 +1,23 @@
+@import '../../user/login/login.component.scss';
+
+.holder {
+  align-items: center;
+  text-align: 45%;
+  align-content: center;
+  border-radius: 10px;
+  border-color: blue;
+}
+.btn-sub {
+  text-align: center;
+}
+.create {
+  margin-top: 90px;
+  margin-left: 50px;
+}
+.text-order {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 60px;
+  font-weight: 900;
+  color: rgb(43, 43, 136);
+}
