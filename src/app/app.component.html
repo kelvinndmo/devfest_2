@@ -25,5 +25,39 @@
         >Create Order</a
       >
     </li>
+    <!-- <li class="nav-item">
+      <a
+        class="nav-link"
+        [routerLink]="['/products', 0, 'edit']"
+        routerLinkActive="active"
+        >Add Product</a
+      >
+    </li> -->
+  </ul>
+  <ul class="navbar-nav ml-auto navbar-blue bg-blue">
+    <!-- <li class="nav-item" *ngIf="isLoggedIn">
+      <a class="nav-link">Welcome {{ userName }}</a>
+    </li>
+    <li class="nav-item" *ngIf="!isMessageDisplayed">
+      <a class="nav-link" (click)="displayMessages()">Show Messages</a>
+    </li>
+    <li class="nav-item" *ngIf="isMessageDisplayed">
+      <a class="nav-link" (click)="hideMessages()">Hide Messages</a>
+    </li> -->
+    <li class="nav-item" *ngIf="!isLoggedIn">
+      <a class="nav-link" [routerLink]="['/login']" routerLinkActive="active"
+        >Log In</a
+      >
+    </li>
+    <li class="nav-item" *ngIf="isLoggedIn">
+      <a class="nav-link" (click)="logOut()" routerLinkActive="active"
+        >Log Out</a
+      >
+    </li>
+  </ul>
+</nav>
+
+
+
 
 <router-outlet></router-outlet>
